@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<table class="table chart">
+<table class="table table-condensed chart">
   <thead>
     <tr>
       <th>#</th>
@@ -10,7 +10,7 @@
     </tr>
   </thead>
   
-  <tbody>
+  <tbody class="table-striped">
     <% @entries.each do |entry| %>
       <tr>
         <td class="position"><%= entry.position %></td>
