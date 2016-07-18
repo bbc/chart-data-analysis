@@ -13,4 +13,9 @@ class ChartsController < ApplicationController
     @entries = ChartEntry.where(:chart => @chart)
   end
 
+  def random
+    @chart = Chart.all.order('RANDOM()').first
+    redirect_to @chart
+  end
+
 end
