@@ -13,6 +13,8 @@
   </div>
 
   <div class="col-md-4">
-    <%= image_tag(@track.image_url('400x400'), class: 'img-thumbnail') %>
+    <% unless @track.image_url.nil? %>
+      <%= image_tag(@track.image_url('400x400'), class: 'img-thumbnail') %>
+    <% end %>
   </div>
 </div>

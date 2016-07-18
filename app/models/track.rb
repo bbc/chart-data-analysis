@@ -15,6 +15,8 @@ class Track < ActiveRecord::Base
   end
   
   def image_url(size='64x64')
-    attributes['image_url'].sub(/\d+x\d+/, size)
+    unless attributes['image_url'].blank?
+      attributes['image_url'].sub(/\d+x\d+/, size)
+    end
   end
 end
