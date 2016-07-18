@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160715191039) do
+ActiveRecord::Schema.define(version: 20160718174518) do
 
   create_table "chart_entries", force: :cascade do |t|
     t.integer  "position",   null: false
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20160715191039) do
     t.integer  "ilm_duration"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.boolean  "explicit"
   end
 
 end
