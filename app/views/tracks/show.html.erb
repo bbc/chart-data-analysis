@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-md-6">
+    <table class="table">
+      <tr><th>Artist</td> <td><%= @track.artist %></td></tr>
+      <tr><th>Title</td> <td><%= @track.title %></td></tr>
+      <tr><th>BBC Record ID</td> <td><%= link_to(@track.record_id, @track.tupac_page) %></td></tr>
+      <tr><th>Updated At</td> <td><%= @track.updated_at %></td></tr>
+      <tr><th>Created At</td> <td><%= @track.created_at %></td></tr>
+    </table>
+  </div>
+
+  <div class="col-md-4">
+    <%= image_tag(@track.image_url('400x400'), class: 'img-thumbnail') %>
+  </div>
+</div>

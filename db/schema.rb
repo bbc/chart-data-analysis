@@ -35,14 +35,18 @@ ActiveRecord::Schema.define(version: 20160715191039) do
   create_table "tracks", force: :cascade do |t|
     t.string   "artist"
     t.string   "title"
-    t.integer  "position"
-    t.string   "broadchart_id"
-    t.string   "broadchart_album"
-    t.string   "record_id"
     t.string   "image_url"
+    t.string   "record_id"
     t.integer  "rebox_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.string   "ilm_isrc"
+    t.string   "ilm_id"
+    t.string   "ilm_genre"
+    t.string   "ilm_year"
+    t.string   "ilm_tunecode"
+    t.string   "ilm_iswc"
+    t.integer  "ilm_duration"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end
