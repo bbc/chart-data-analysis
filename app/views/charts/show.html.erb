@@ -7,6 +7,7 @@
       <th>Artwork</th>
       <th>Artist</th>
       <th>Title</th>
+      <th>iLM</th>
     </tr>
   </thead>
   
@@ -17,6 +18,12 @@
         <td class="image"><%= link_to(image_tag(entry.track.image_url, size: '64x64'), entry.track.tupac_page) %></td>
         <td class="artist"><%= entry.track.artist %></td>
         <td class="title"><%= link_to(entry.track.title, entry.track) %></td>
+        <td>
+        <% unless entry.track.ilm_id.nil? %>
+          <%= link_to('▶', entry.track.ilm_player_page, target: '_blank') %>
+          <%= link_to(entry.track.ilm_id, entry.track.ilm_info_page, target: '_blank') %>
+        <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>

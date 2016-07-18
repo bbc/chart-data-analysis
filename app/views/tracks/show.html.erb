@@ -6,6 +6,7 @@
       <tr><th>Artist</td> <td><%= @track.artist %></td></tr>
       <tr><th>Title</td> <td><%= @track.title %></td></tr>
       <tr><th>BBC Record ID</td> <td><%= link_to(@track.record_id, @track.tupac_page) %></td></tr>
+      <tr><th>iLikeMusic ID</td> <td><%= @track.ilm_id.nil? ? 'n/a' : link_to(@track.ilm_id, @track.ilm_info_page, target: '_blank') %></td></tr>
       <tr><th>Updated At</td> <td><%= @track.updated_at %></td></tr>
       <tr><th>Created At</td> <td><%= @track.created_at %></td></tr>
     </table>
