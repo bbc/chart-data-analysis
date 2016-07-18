@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tracks</h1>
+
+<table class="table">
+  <tr>
+    <th>Artist</th>
+    <th>Title</th>
+    <th>Record ID</th>
+  </tr>
+
+  <% @tracks.each do |track| %>
+    <tr>
+      <td><%= track.artist %></td>
+      <td><%= track.title %></td>
+      <td><%= link_to(track.record_id, track.tupac_page) %></td>
+    </tr>
+  <% end %>
+</table>

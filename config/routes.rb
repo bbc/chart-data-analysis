@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   resources :charts do
     get 'random', on: :collection
   end
-  resources :tracks
+  resources :tracks do
+    get 'without_ilm', on: :collection
+  end
 
   # You can have the root of your site routed with "root"
   root 'home#index'

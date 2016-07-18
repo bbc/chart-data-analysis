@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table">
+  <tr><th>Total Tracks</th> <td><%= Track.count %></td></tr>
+  <tr><th>With iLike Music</th> <td><%= Track.where('ilm_id IS NOT NULL').count %></td></tr>
+  <tr><th><%= link_to('Without iLike Music', without_ilm_tracks_path) %></th> <td><%= Track.where('ilm_id IS NULL').count %></td></tr>
+</table>
