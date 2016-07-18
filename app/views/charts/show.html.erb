@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table chart">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Artwork</th>
+      <th>Artist</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @entries.each do |entry| %>
+      <tr>
+        <td class="position"><%= entry.position %></td>
+        <td class="image"><%= link_to(image_tag(entry.track.image_url, size: '64x64'), entry.track.tupac_page) %></td>
+        <td class="artist"><%= entry.track.artist %></td>
+        <td class="title"><%= entry.track.title %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>

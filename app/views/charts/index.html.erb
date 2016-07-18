@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Charts</h1>
+
+<ul>
+  <% @charts.each do |chart| %>
+    <li><%= link_to(chart, chart) %></li>
+  <% end %>
+</ul>
