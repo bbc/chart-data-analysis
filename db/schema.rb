@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20160715191039) do
   end
 
   add_index "chart_entries", ["chart_id"], name: "index_chart_entries_on_chart_id"
-  add_index "chart_entries", ["position", "chart_id", "track_id"], name: "index_chart_entries_on_position_and_chart_id_and_track_id", unique: true
+  add_index "chart_entries", ["position", "chart_id"], name: "index_chart_entries_on_position_and_chart_id", unique: true
   add_index "chart_entries", ["position"], name: "index_chart_entries_on_position"
   add_index "chart_entries", ["track_id"], name: "index_chart_entries_on_track_id"
 
