@@ -1,0 +1,4 @@
+<%= CSV.generate_line(['Artist', 'Title', 'Record ID']) -%>
+<%- @tracks.each do |track| -%>
+<%= CSV.generate_line([track.artist, track.title, track.record_id]) -%>
+<%- end -%>

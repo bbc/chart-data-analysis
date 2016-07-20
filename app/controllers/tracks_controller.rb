@@ -8,6 +8,9 @@ class TracksController < ApplicationController
   
   def without_ilm
     @tracks = Track.all.where("ilm_id IS NULL")
-    render :list
+    respond_to do |format|
+      format.html { render :list }
+      format.csv { render :list }
+    end
   end
 end
