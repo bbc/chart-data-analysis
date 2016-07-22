@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160718174518) do
+ActiveRecord::Schema.define(version: 20160722113107) do
 
   create_table "chart_entries", force: :cascade do |t|
     t.integer  "position",   null: false
@@ -45,9 +45,12 @@ ActiveRecord::Schema.define(version: 20160718174518) do
     t.string   "ilm_tunecode"
     t.string   "ilm_iswc"
     t.integer  "ilm_duration"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.boolean  "explicit"
+    t.string   "occ_product_id"
+    t.string   "occ_image_url"
+    t.string   "label"
   end
 
 end
