@@ -15,6 +15,10 @@
       <tr><th> &nbsp; Year</td> <td><%= @track.ilm_year %></td></tr>
       <tr><th>Official Chart ID</td> <td><%= @track.occ_product_id %></td></tr>
       <tr><th> &nbsp; Label</td> <td><%= @track.label %></td></tr>
+      <tr><th> &nbsp; iTunes</td> <td><%= link_to(@track.itunes_url, @track.itunes_url) %></td></tr>
+      <tr><th> &nbsp; Spotify</td> <td><%= link_to(@track.spotify_url, @track.spotify_url) %></td></tr>
+      <tr><th> &nbsp; Amazon</td> <td><%= link_to(@track.amazon_url, @track.amazon_url) %></td></tr>
+      <tr><th> &nbsp; Deezer</td> <td><%= link_to(@track.deezer_url, @track.deezer_url) %></td></tr>
       <tr><th>Updated At</td> <td><%= @track.updated_at %></td></tr>
       <tr><th>Created At</td> <td><%= @track.created_at %></td></tr>
     </table>

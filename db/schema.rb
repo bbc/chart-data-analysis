@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160722160934) do
+ActiveRecord::Schema.define(version: 20160722182810) do
 
   create_table "chart_entries", force: :cascade do |t|
     t.integer  "position",   null: false
@@ -52,6 +52,10 @@ ActiveRecord::Schema.define(version: 20160722160934) do
     t.string   "occ_image_url"
     t.string   "label"
     t.string   "wave_file_id"
+    t.string   "amazon_id"
+    t.string   "itunes_url"
+    t.string   "deezer_id"
+    t.string   "spotify_id"
   end
 
 end

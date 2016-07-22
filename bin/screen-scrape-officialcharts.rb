@@ -34,7 +34,26 @@ def process_chart_html(filename)
         :label => track.at('.label').inner_text.strip.titleize,
         :image_src => image_src
       }
+    
+    else
+    
+      # Look for external links
+      if row.at('.spotify')
+        chart[:entries].last[:spotify_url] = row.at('.spotify')['href']
+      end
+      if row.at('.deezer')
+        chart[:entries].last[:deezer_url] = row.at('.deezer')['href']
+      end
+      if row.at('.itunes')
+        chart[:entries].last[:itunes_url] = row.at('.itunes')['href']
+      end
+      if row.at('.amazon')
+        chart[:entries].last[:amazon_url] = row.at('.amazon')['href']
+      end
+
     end
+    
+    
   end
 
   File.open(output_filename, 'wb') do |file|

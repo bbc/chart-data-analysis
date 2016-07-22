@@ -20,6 +20,18 @@ class Track < ActiveRecord::Base
     end
   end
   
+  def spotify_url
+    "https://open.spotify.com/track/#{spotify_id}"
+  end
+  
+  def amazon_url
+    "http://www.amazon.co.uk/dp/#{amazon_id}"
+  end
+  
+  def deezer_url
+    "http://www.deezer.com/track/#{deezer_id}"
+  end
+  
   def to_hash
     attributes.to_hash
   end
