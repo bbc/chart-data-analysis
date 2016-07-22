@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <%= link_to("Offical Chart Company Page", @chart.official_chart_page) %>
+</p>
+
+
 <table class="table table-condensed chart">
   <thead>
     <tr>
@@ -8,6 +13,7 @@
       <th>Artist</th>
       <th>Title</th>
       <th>iLM</th>
+      <th>OCC</th>
     </tr>
   </thead>
   
@@ -28,6 +34,7 @@
           <%= link_to(entry.track.ilm_id, entry.track.ilm_info_page, target: '_blank') %>
         <% end %>
         </td>
+        <td><%= entry.track.occ_product_id %></td>
       </tr>
     <% end %>
   </tbody>

@@ -13,4 +13,20 @@ class TracksController < ApplicationController
       format.csv { render :list }
     end
   end
+
+  def without_occ
+    @tracks = Track.all.where("occ_product_id IS NULL")
+    respond_to do |format|
+      format.html { render :list }
+      format.csv { render :list }
+    end
+  end
+
+  def without_tupac
+    @tracks = Track.all.where("record_id IS NULL")
+    respond_to do |format|
+      format.html { render :list }
+      format.csv { render :list }
+    end
+  end
 end

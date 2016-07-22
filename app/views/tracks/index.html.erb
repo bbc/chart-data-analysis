@@ -4,4 +4,6 @@
   <tr><th>Total Tracks</th> <td><%= Track.count %></td></tr>
   <tr><th>With iLike Music</th> <td><%= Track.where('ilm_id IS NOT NULL').count %></td></tr>
   <tr><th><%= link_to('Without iLike Music', without_ilm_tracks_path) %></th> <td><%= Track.where('ilm_id IS NULL').count %></td></tr>
+  <tr><th><%= link_to('Without OCC Product ID', without_occ_tracks_path) %></th> <td><%= Track.where('occ_product_id IS NULL').count %></td></tr>
+  <tr><th><%= link_to('Without Tupac ID', without_tupac_tracks_path) %></th> <td><%= Track.where('record_id IS NULL').count %></td></tr>
 </table>

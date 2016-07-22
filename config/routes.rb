@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   end
   resources :tracks do
     get 'without_ilm', on: :collection
+    get 'without_occ', on: :collection
+    get 'without_tupac', on: :collection
   end
 
   # You can have the root of your site routed with "root"

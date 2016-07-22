@@ -9,7 +9,7 @@ class ChartsController < ApplicationController
   # GET /charts/1.json
   def show
     @chart = Chart.where(:date => params[:id]).
-                   includes(:entries => [:track])
+                   includes(:entries => [:track]).first
     @entries = ChartEntry.where(:chart => @chart)
   end
 

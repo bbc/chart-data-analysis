@@ -12,7 +12,7 @@
   <% @tracks.each do |track| %>
     <tr>
       <td><%= track.artist %></td>
-      <td><%= track.title %></td>
+      <td><%= link_to(track.title, track) %></td>
       <td><%= link_to(track.record_id, track.tupac_page) %></td>
     </tr>
   <% end %>
