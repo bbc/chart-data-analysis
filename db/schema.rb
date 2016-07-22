@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160722113107) do
+ActiveRecord::Schema.define(version: 20160722160934) do
 
   create_table "chart_entries", force: :cascade do |t|
     t.integer  "position",   null: false
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20160722113107) do
     t.string   "occ_product_id"
     t.string   "occ_image_url"
     t.string   "label"
+    t.string   "wave_file_id"
   end
 
 end

@@ -5,14 +5,21 @@
     <table class="table">
       <tr><th>Artist</td> <td><%= @track.artist %></td></tr>
       <tr><th>Title</td> <td><%= @track.title %></td></tr>
-      <tr><th>Label</td> <td><%= @track.label %></td></tr>
       <tr><th>BBC Record ID</td> <td><%= link_to(@track.record_id, @track.tupac_page) %></td></tr>
       <tr><th>iLikeMusic ID</td> <td><%= @track.ilm_id.nil? ? 'n/a' : link_to(@track.ilm_id, @track.ilm_info_page, target: '_blank') %></td></tr>
+      <tr><th> &nbsp; Duration</td> <td><%= format_duration(@track.ilm_duration) %></td></tr>
+      <tr><th> &nbsp; Genre</td> <td><%= @track.ilm_genre %></td></tr>
+      <tr><th> &nbsp; ISRC</td> <td><%= @track.ilm_isrc %></td></tr>
+      <tr><th> &nbsp; ISWC</td> <td><%= @track.ilm_iswc %></td></tr>
+      <tr><th> &nbsp; TuneCode</td> <td><%= @track.ilm_tunecode %></td></tr>
+      <tr><th> &nbsp; Year</td> <td><%= @track.ilm_year %></td></tr>
       <tr><th>Official Chart ID</td> <td><%= @track.occ_product_id %></td></tr>
+      <tr><th> &nbsp; Label</td> <td><%= @track.label %></td></tr>
       <tr><th>Updated At</td> <td><%= @track.updated_at %></td></tr>
       <tr><th>Created At</td> <td><%= @track.created_at %></td></tr>
     </table>
   </div>
+
 
   <div class="col-md-4">
     <% unless @track.image_url.nil? %>
