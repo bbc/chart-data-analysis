@@ -19,4 +19,8 @@ class Track < ActiveRecord::Base
       attributes['image_url'].sub(/\d+x\d+/, size)
     end
   end
+  
+  def to_hash
+    attributes.to_hash
+  end
 end
